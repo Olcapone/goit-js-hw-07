@@ -24,13 +24,18 @@ const images = [
     </li>`
   };
 
+
   const MakeListEl = images.map(listEl).join('');
   
    const galleryEl = document.querySelector('#gallery');
-
+   galleryEl.classList.add('gallery-view');
    galleryEl.insertAdjacentHTML('beforeend', MakeListEl);
 
- 
+  const listElemDec = document.querySelector('li');
+  listElemDec.classList.add('gallery-elem-decor');
+
+
+  
 
 
 
