@@ -20,7 +20,7 @@ const images = [
 
     return `
     <li>
-      <img src=${url} alt=${alt}>
+      <img src=${url} alt=${alt}  width =400  height = 200>
     </li>`
   };
 
@@ -31,9 +31,7 @@ const images = [
    galleryEl.classList.add('gallery-view');
    galleryEl.insertAdjacentHTML('beforeend', MakeListEl);
 
-  const listElemDec = document.querySelector('li');
-  listElemDec.classList.add('gallery-elem-decor');
-
+  
 
   
 

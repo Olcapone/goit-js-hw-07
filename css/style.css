@@ -1,0 +1,10 @@
+.gallery-view{
+    display: flex;
+   align-items: center;
+
+   list-style: none;
+}
+
+.gallery-view li:not(:last-child) {
+    margin-right: 50px;
+  } 
