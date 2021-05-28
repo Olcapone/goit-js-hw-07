@@ -1,26 +1,25 @@
-const ref = {
-    inputEl: document.querySelector('#validation-input'),
-    
-};
+const inputEl = document.querySelector('#validation-input');
+
+inputEl.addEventListener('blur', OnValidation);
 
 
+console.log(parseInt(inputEl.dataset.length));
 
- ref.inputEl.addEventListener('blur', OnValidation);
 
 
 function OnValidation(event){
 
 
-     if(event.target.value.length === 6){
-
-        ref.inputEl.classList.add('valid');
-
-         ref.inputEl.textContent = event.target.value; 
-            
+     if(event.target.value.length === parseInt(inputEl.dataset.length)) {
+         inputEl.classList.add('valid'); 
+         inputEl.classList.remove('invalid');
      }
-    
-     else {ref.inputEl.classList.add('invalid');
-    
+            
+     else {
+         inputEl.classList.add('invalid');
+         inputEl.classList.remove('valid');
     }
+
+    
     }
  
