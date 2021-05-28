@@ -4,8 +4,10 @@ const ref = {
 };
 
 
-ref.inputEl.addEventListener('blur', OntextForm);
+ref.inputEl.addEventListener('input', OntextForm);
 
 function OntextForm(event) {
-if(event.target.value.length>0) ref.nameEl.textContent = event.target.value;
+if(ref.inputEl.value === '') ref.nameEl.textContent = 'незнакомец';
+ 
+else ref.nameEl.textContent = ref.inputEl.value;
 }
