@@ -1,6 +1,6 @@
 const inputEl = document.querySelector('#validation-input');
 
-inputEl.addEventListener('blur', OnValidation);
+inputEl.addEventListener('input', OnValidation);
 
 function OnValidation(event){
 
