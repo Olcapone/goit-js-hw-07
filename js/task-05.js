@@ -7,7 +7,7 @@ const ref = {
 ref.inputEl.addEventListener('input', OntextForm);
 
 function OntextForm(event) {
-if(ref.inputEl.value === '') ref.nameEl.textContent = 'незнакомец';
+if(ref.inputEl.value.trim() === '') ref.nameEl.textContent = 'незнакомец';
  
 else ref.nameEl.textContent = ref.inputEl.value;
 }
