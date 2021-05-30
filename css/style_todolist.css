@@ -1,0 +1,25 @@
+.collection {
+display:flex;
+flex-direction: column;
+
+
+}
+.task_todo{
+     display:flex;
+     margin-top: 20px;
+}
+
+
+.task_todo span{
+   
+  align-items: center; 
+  text-align:center;
+}
+.check:checked + span{
+    text-decoration:line-through;
+
+}
+
+.check {
+    margin-top: 4px;
+}
