@@ -11,8 +11,6 @@ refs.inputEl.addEventListener('input', OnClick);
 function createBoxes(amount){
 
     amount = parseInt(refs.inputEl.value);
-
-    console.log(amount);
    
     const divCollection = [];
     const MAX_AMAUNT = 100;
@@ -33,25 +31,26 @@ function createBoxes(amount){
 
             divCollection.push(divEl);
  };
-
     }
     refs.boxesEl.append(...divCollection);
-    console.log(refs.boxesEl);
+   
+};
+
+function destroyBoxes(){
+    refs.boxesEl.innerHTML = '';
 };
 
    function  OnClick(event){
 
         const actionClick =event.target.dataset.action;
-        
-        if(actionClick !== 'render' && actionClick !== 'destroy') return; 
 
-        else if (actionClick === 'render') {
-
-            const amountEl = event.target.value; 
-
-        createBoxes(amountEl);
-          
-     }
+        switch (actionClick) {
+            case 'render': createBoxes();      
+                break;
+            case 'destroy': destroyBoxes();      
+                break;
+                default: break;
+            }
     }
 
         
